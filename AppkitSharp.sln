@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Models", "source\AppkitSharp.Models\AppkitSharp.Models.csproj", "{2A260607-C9A5-4CDE-B87F-00D2665E6541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.Models", "source\AppkitSharp.Models\AppkitSharp.Models.csproj", "{2A260607-C9A5-4CDE-B87F-00D2665E6541}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F224313-366F-4FC2-9138-4F05DDA23C1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.TestClient", "tests\AppkitSharp.TestClient\AppkitSharp.TestClient.csproj", "{892A0FF7-1279-4CE6-B685-5ABD71114505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.TestClient", "tests\AppkitSharp.TestClient\AppkitSharp.TestClient.csproj", "{892A0FF7-1279-4CE6-B685-5ABD71114505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Services", "source\AppkitSharp.Services\AppkitSharp.Services.csproj", "{E90AFE37-933C-4B59-BA4D-AA188B463DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Services.Tests", "tests\AppkitSharp.Services.Tests\AppkitSharp.Services.Tests.csproj", "{304CA822-CB7B-43C5-9049-0F26720F8DF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,21 @@ Global
 		{892A0FF7-1279-4CE6-B685-5ABD71114505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892A0FF7-1279-4CE6-B685-5ABD71114505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892A0FF7-1279-4CE6-B685-5ABD71114505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90AFE37-933C-4B59-BA4D-AA188B463DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90AFE37-933C-4B59-BA4D-AA188B463DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90AFE37-933C-4B59-BA4D-AA188B463DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90AFE37-933C-4B59-BA4D-AA188B463DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{892A0FF7-1279-4CE6-B685-5ABD71114505} = {9F224313-366F-4FC2-9138-4F05DDA23C1C}
+		{304CA822-CB7B-43C5-9049-0F26720F8DF2} = {9F224313-366F-4FC2-9138-4F05DDA23C1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3EDC9F87-EA61-4717-A551-CF4E574170FD}

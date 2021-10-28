@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ChineseSimplified.txt" />
+    <None Remove="Resources\ChineseTraditional.txt" />
+    <None Remove="Resources\english.txt" />
+    <None Remove="Resources\french.txt" />
+    <None Remove="Resources\italian.txt" />
+    <None Remove="Resources\japanese.txt" />
+    <None Remove="Resources\korean.txt" />
+    <None Remove="Resources\spanish.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ChineseSimplified.txt" />
+    <EmbeddedResource Include="Resources\ChineseTraditional.txt" />
+    <EmbeddedResource Include="Resources\English.txt" />
+    <EmbeddedResource Include="Resources\French.txt" />
+    <EmbeddedResource Include="Resources\Italian.txt" />
+    <EmbeddedResource Include="Resources\Japanese.txt" />
+    <EmbeddedResource Include="Resources\Korean.txt" />
+    <EmbeddedResource Include="Resources\Spanish.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="5.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppkitSharp.Models\AppkitSharp.Models.csproj" />
+  </ItemGroup>
+  
+</Project>
