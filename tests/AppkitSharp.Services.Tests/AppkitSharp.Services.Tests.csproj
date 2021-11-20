@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\source\AppkitSharp.Common\AppkitSharp.Common.csproj" />
     <ProjectReference Include="..\..\source\AppkitSharp.Models\AppkitSharp.Models.csproj" />
     <ProjectReference Include="..\..\source\AppkitSharp.Services\AppkitSharp.Services.csproj" />
   </ItemGroup>

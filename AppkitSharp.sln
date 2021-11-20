@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.Models", "source\AppkitSharp.Models\AppkitSharp.Models.csproj", "{2A260607-C9A5-4CDE-B87F-00D2665E6541}"
 EndProject
@@ -9,9 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9F224313
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.TestClient", "tests\AppkitSharp.TestClient\AppkitSharp.TestClient.csproj", "{892A0FF7-1279-4CE6-B685-5ABD71114505}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Services", "source\AppkitSharp.Services\AppkitSharp.Services.csproj", "{E90AFE37-933C-4B59-BA4D-AA188B463DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.Services", "source\AppkitSharp.Services\AppkitSharp.Services.csproj", "{E90AFE37-933C-4B59-BA4D-AA188B463DCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Services.Tests", "tests\AppkitSharp.Services.Tests\AppkitSharp.Services.Tests.csproj", "{304CA822-CB7B-43C5-9049-0F26720F8DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppkitSharp.Services.Tests", "tests\AppkitSharp.Services.Tests\AppkitSharp.Services.Tests.csproj", "{304CA822-CB7B-43C5-9049-0F26720F8DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppkitSharp.Common", "source\AppkitSharp.Common\AppkitSharp.Common.csproj", "{1625CDB2-D25C-49A4-BD09-306E52883933}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{304CA822-CB7B-43C5-9049-0F26720F8DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1625CDB2-D25C-49A4-BD09-306E52883933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1625CDB2-D25C-49A4-BD09-306E52883933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1625CDB2-D25C-49A4-BD09-306E52883933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1625CDB2-D25C-49A4-BD09-306E52883933}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
