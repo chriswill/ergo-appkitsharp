@@ -39,7 +39,7 @@ namespace AppkitSharp.Models.Addresses
             //    throw new ArgumentException("Invalid characters", nameof(address));
             //}
 
-            address = address;
+            //address = address;
             //bytes = Bech32.Decode(_address, out byte witVer, out string prefix);
 
             //Prefix = prefix;

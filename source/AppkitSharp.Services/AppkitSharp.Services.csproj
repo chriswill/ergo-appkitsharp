@@ -35,5 +35,9 @@
     <ProjectReference Include="..\AppkitSharp.Common\AppkitSharp.Common.csproj" />
     <ProjectReference Include="..\AppkitSharp.Models\AppkitSharp.Models.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="API\Models\" />
+  </ItemGroup>
   
 </Project>

@@ -2,10 +2,12 @@
 
 namespace AppkitSharp.Models.Addresses
 {
-    public class Pay2SAddress : IErgoAddress
+    public class Pay2SAddress : AddressBase
     {
-        public byte AddressTypePrefix => Constants.PayToScriptAddress;
-        public byte[] AddressBytes { get; set; }
-        public byte NetworkPrefix { get; set; }
+
+
+        public Pay2SAddress(string address) : base(address)
+        {
+        }
     }
 }

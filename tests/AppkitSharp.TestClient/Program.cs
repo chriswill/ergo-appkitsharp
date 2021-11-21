@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Net.Mime;
+﻿using System.IO;
 using System.Threading.Tasks;
 using AppkitSharp.Models.Configuration;
 using AppkitSharp.Services.Wallet;

@@ -2,10 +2,13 @@
 
 namespace AppkitSharp.Models.Addresses
 {
-    public class P2PKAddress : IErgoAddress
+    public class P2PkAddress : AddressBase
     {
-        public byte AddressTypePrefix => Constants.PayToPublicKeyAddress;
-        public byte[] AddressBytes { get; set; }
-        public byte NetworkPrefix { get; set; }
+
+        public P2PkAddress(){}
+
+        public P2PkAddress(string address) : base(address)
+        {
+        }
     }
 }

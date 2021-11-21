@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using AppkitSharp.Models.Keys;
+using AppkitSharp.Models.Wallet;
 using Org.BouncyCastle.Crypto.Digests;
 using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -13,7 +14,7 @@ namespace AppkitSharp.Services.Extensions
         {
             byte[] rootKey = GetSeed(mnemonic, password);
 
-            return new PrivateKey(rootKey, rootKey);
+            return new PrivateKey(rootKey, rootKey, DerivationPath.MasterPath);
         }
 
         public static byte[] GetSeed(this Mnemonic mnemonic, string password = "")

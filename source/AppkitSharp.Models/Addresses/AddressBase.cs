@@ -7,6 +7,9 @@ namespace AppkitSharp.Models.Addresses
     public abstract class AddressBase : IErgoAddress, IEqualityComparer<Address>, IEquatable<Address>,
         IEquatable<string>, IEquatable<byte[]>
     {
+
+        protected AddressBase(){}
+
         protected AddressBase(string address)
         {
 
@@ -44,19 +47,6 @@ namespace AppkitSharp.Models.Addresses
         public int GetHashCode(Address obj)
         {
             throw new NotImplementedException();
-        }
-
-        public IErgoAddress FromBase58(string address)
-        {
-            byte[] bytes = Base58Encoding.Decode(address);
-            byte header = bytes[0];
-
-
-            if (!addr.IsValid())
-            {
-                throw new Error(`Invalid Ergo address ${ address }`);
-            }
-            return addr;
         }
 
         public bool IsValid()
