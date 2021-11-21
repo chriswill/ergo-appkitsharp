@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
+using AppkitSharp.Common.Extensions;
 using AppkitSharp.Models;
 using AppkitSharp.Models.Keys;
 using AppkitSharp.Services.Extensions;

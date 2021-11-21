@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AppkitSharp.Services.Extensions
+namespace AppkitSharp.Common.Extensions
 {
     public static class ByteArrayExtensions
     {

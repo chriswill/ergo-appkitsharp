@@ -12,7 +12,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 
 		public static byte[] AddCheckSum(byte[] data)
 		{
-			if (data == null) throw new ArgumentNullException("data");
+			if (data == null) throw new ArgumentNullException(nameof(data));
             byte[] checkSum = GetCheckSum(data);
 			byte[] dataWithCheckSum = ArrayHelpers.ConcatArrays(data, checkSum);
 			return dataWithCheckSum;
@@ -21,7 +21,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 		//Returns null if the checksum is invalid
 		public static byte[] VerifyAndRemoveCheckSum(byte[] data)
 		{
-            if (data == null) throw new ArgumentNullException("data");
+            if (data == null) throw new ArgumentNullException(nameof(data));
 			byte[] result = ArrayHelpers.SubArray(data, 0, data.Length - CheckSumSizeInBytes);
 			byte[] givenCheckSum = ArrayHelpers.SubArray(data, data.Length - CheckSumSizeInBytes);
 			byte[] correctCheckSum = GetCheckSum(result);
@@ -32,7 +32,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 
 		public static string Encode(byte[] data)
 		{
-            if (data == null) throw new ArgumentNullException("data");
+            if (data == null) throw new ArgumentNullException(nameof(data));
 
 			// Decode byte[] to BigInteger
 			BigInteger intData = 0;
@@ -60,13 +60,13 @@ namespace AppkitSharp.Common.Encoding.Base58
 
 		public static string EncodeWithCheckSum(byte[] data)
 		{
-            if (data == null) throw new ArgumentNullException("data");
+            if (data == null) throw new ArgumentNullException(nameof(data));
 			return Encode(AddCheckSum(data));
 		}
 
 		public static byte[] Decode(string s)
 		{
-            if (s == null) throw new ArgumentNullException("s");
+            if (s == null) throw new ArgumentNullException(nameof(s));
 
 			// Decode Base58 string to BigInteger 
 			BigInteger intData = 0;
@@ -74,7 +74,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 			{
 				int digit = Digits.IndexOf(s[i]); //Slow
 				if (digit < 0)
-					throw new FormatException(string.Format("Invalid Base58 character `{0}` at position {1}", s[i], i));
+					throw new FormatException($"Invalid Base58 character `{s[i]}` at position {i}");
 				intData = intData * 58 + digit;
 			}
 
@@ -93,7 +93,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 		// Throws `FormatException` if s is not a valid Base58 string, or the checksum is invalid
 		public static byte[] DecodeWithCheckSum(string s)
 		{
-            if (s == null) throw new ArgumentNullException("s");
+            if (s == null) throw new ArgumentNullException(nameof(s));
 			var dataWithCheckSum = Decode(s);
 			var dataWithoutCheckSum = VerifyAndRemoveCheckSum(dataWithCheckSum);
 			if (dataWithoutCheckSum == null)
@@ -103,7 +103,7 @@ namespace AppkitSharp.Common.Encoding.Base58
 
 		private static byte[] GetCheckSum(byte[] data)
 		{
-            if (data == null) throw new ArgumentNullException("data");
+            if (data == null) throw new ArgumentNullException(nameof(data));
 
 			SHA256 sha256 = new SHA256Managed();
 			byte[] hash1 = sha256.ComputeHash(data);

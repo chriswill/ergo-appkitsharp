@@ -26,10 +26,10 @@
         Default = 44
     }
 
-    public enum NetworkType
+    public enum NetworkType: byte
     {
-        Testnet,
-        Mainnet
+        Mainnet = 0x00,
+        Testnet = 0x10
     }
 
     public enum RoleType
@@ -44,11 +44,11 @@
         InternalChain = 1
     }
 
-    public enum AddressType
+    public enum AddressType: byte
     {
-        PayToPublicKey,
-        PayToScriptHash,
-        PayToScript
+        PayToPublicKey = 0x01,
+        PayToScriptHash = 0x02,
+        PayToScript = 0x03
     }
 
     public enum WordList

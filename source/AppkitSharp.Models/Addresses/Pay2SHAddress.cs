@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AppkitSharp.Common;
+﻿using AppkitSharp.Common.Extensions;
 
 namespace AppkitSharp.Models.Addresses
 {
@@ -12,5 +9,9 @@ namespace AppkitSharp.Models.Addresses
         public Pay2SHAddress(string address) : base(address)
         {
         }
+
+        public override AddressType AddressType => AddressType.PayToScriptHash;
+
+        public override string ErgoTree => AddressBytes.SubArray(1, AddressBytes.Length - 4).ToStringHex();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AppkitSharp.Common.Extensions
 {
@@ -24,6 +25,15 @@ namespace AppkitSharp.Common.Extensions
                 .ToString(source)
                 .Replace("-", "")
                 .ToLower();
+        }
+
+        public static byte[] FromStringHex(this string source)
+        {
+            int numberChars = source.Length;
+            byte[] bytes = new byte[numberChars / 2];
+            for (int i = 0; i < numberChars; i += 2)
+                bytes[i / 2] = Convert.ToByte(source.Substring(i, 2), 16);
+            return bytes;
         }
     }
 }
